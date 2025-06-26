@@ -1,19 +1,33 @@
 # UAS_PenalaranComputer
-📘 UAS Penalaran Komputer - Pipeline NLP End-to-End
+IMPLEMENTASI SISTEM CASE-BASED REASONING (CBR) BERBASIS PYTHON UNTUK ANALISIS PUTUSAN PENGADILAN PADA PERKARA PIDANA MILITER
 
-Instalasi
-Untuk menjalankan proyek ini secara lokal, ikuti langkah berikut:
-a. Clone Repository
-git clone https://github.com/username/nama-repo.git cd nama-repo
+Repositori ini berisi implementasi sistem *Case-Based Reasoning* (CBR) menggunakan Python untuk menganalisis dokumen putusan pengadilan pada perkara pidana militer. Sistem ini mencakup tahapan pre-processing, pembentukan basis kasus, retrieval kasus serupa, hingga evaluasi performa model.
 
-b. Buat dan Aktifkan Virtual Environment (Opsional)
-python -m venv venv source venv/bin/activate  # Linux/Mac venv\Scripts\activate     # Windows
 
-c. Instal Dependencies
-pip install -r requirements.txt
+1. **Clone repositori ini**
+`git clone https://github.com/username/proyek-cbr-pidana-militer.git
+cd proyek-cbr-pidana-militer'
 
-Menjalankan Pipeline
-Buka file notebook:
-jupyter notebook UAS_PenalaranKomputer_304_311.ipynb
+2. **Buat virtual environment (opsional tapi disarankan)**
+`python -m venv env
+source env/bin/activate  # Untuk Linux/macOS
+env\Scripts\activate     # Untuk Windows'
+
+3. **Install dependencies**
+`pip install -r requirements.txt'
+
+🚀 Menjalankan Pipeline End-to-End
+`python main.py'
+
+
+📌 Contoh Penggunaan
+
+### Menjalankan retrieval kasus dari input teks:
+'python cbr/retrieve.py --input "Teks deskripsi kasus pidana militer..."'
+
+
+### Menjalankan evaluasi:
+'python evaluation/evaluate.py --predicted output/predicted.csv --groundtruth data/ground_truth.csv'
+
 
 
